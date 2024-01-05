@@ -1,5 +1,9 @@
 import 'package:apotech_apps/app/const/app_sizes.dart';
 import 'package:apotech_apps/app/theme/app_colors.dart';
+import 'package:apotech_apps/view/category/category_view.dart';
+import 'package:apotech_apps/view/checkout/chekout_view.dart';
+import 'package:apotech_apps/view/home/dashboard_view.dart';
+import 'package:apotech_apps/view/profile/profile_view.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomNavigation extends StatefulWidget {
@@ -37,6 +41,11 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                   setState(() {
                     initialButton = 1;
                   });
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    DashboardView.routeName,
+                    ModalRoute.withName(DashboardView.routeName),
+                  );
                 },
                 icon: Icon(
                   Icons.home_outlined,
@@ -50,6 +59,11 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                   setState(() {
                     initialButton = 2;
                   });
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    DashboardView.routeName,
+                    ModalRoute.withName(DashboardView.routeName),
+                  );
                 },
                 icon: Icon(
                   Icons.notifications_none,
@@ -61,6 +75,11 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                 setState(() {
                   initialButton = 5;
                 });
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  CategoryView.routeName,
+                  ModalRoute.withName(DashboardView.routeName),
+                );
               },
               child: Ink(
                 width: 40,
@@ -85,6 +104,11 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                   setState(() {
                     initialButton = 3;
                   });
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    CheckoutView.routeName,
+                    ModalRoute.withName(DashboardView.routeName),
+                  );
                 },
                 icon: Icon(
                   Icons.shopping_bag_outlined,
@@ -98,6 +122,11 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                   setState(() {
                     initialButton = 4;
                   });
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    ProfileView.routeName,
+                    ModalRoute.withName(DashboardView.routeName),
+                  );
                 },
                 icon: Icon(
                   Icons.person_2_outlined,

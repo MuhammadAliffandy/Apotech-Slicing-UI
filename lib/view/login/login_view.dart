@@ -19,7 +19,7 @@ class LoginView extends StatelessWidget {
       appBar: AppBar(
         leading: const Icon(
           Icons.arrow_back,
-          color: AppColors.base,
+          color: AppColors.purple,
         ),
       ),
       body: Padding(

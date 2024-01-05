@@ -4,6 +4,7 @@ import 'package:apotech_apps/app/theme/app_colors.dart';
 import 'package:apotech_apps/app/theme/app_text_style.dart';
 import 'package:apotech_apps/app/widget/app_buton.dart';
 import 'package:apotech_apps/app/widget/app_product_card.dart';
+import 'package:apotech_apps/view/checkout/chekout_view.dart';
 import 'package:flutter/material.dart';
 
 class CartView extends StatefulWidget {
@@ -41,7 +42,13 @@ class _CartViewState extends State<CartView> {
         child: AppButton(
           text: 'Place Order Rp 30.000',
           elevation: 6,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              CheckoutView.routeName,
+              ModalRoute.withName(CartView.routeName),
+            );
+          },
         ),
       ),
     );

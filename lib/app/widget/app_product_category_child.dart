@@ -12,6 +12,7 @@ class ProductCategoryChild extends StatefulWidget {
   final bool isLabel;
   final String? labelText;
   final Color? labelColor;
+  final void Function()? onTap;
 
   const ProductCategoryChild({
     super.key,
@@ -22,6 +23,7 @@ class ProductCategoryChild extends StatefulWidget {
     this.isLabel = false,
     this.labelColor,
     this.labelText,
+    this.onTap,
   });
 
   @override
@@ -47,7 +49,7 @@ class _ProductCategoryChildState extends State<ProductCategoryChild> {
       child: InkWell(
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         splashColor: AppColors.base.withOpacity(0.20),
-        onTap: () {},
+        onTap: widget.onTap ?? () {},
         child: Stack(
           children: [
             Column(

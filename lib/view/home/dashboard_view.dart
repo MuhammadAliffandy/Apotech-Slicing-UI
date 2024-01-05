@@ -6,6 +6,7 @@ import 'package:apotech_apps/app/widget/app_brands_child.dart';
 import 'package:apotech_apps/app/widget/app_categories_child.dart';
 import 'package:apotech_apps/app/widget/app_product_child.dart';
 import 'package:apotech_apps/app/widget/app_text_field.dart';
+import 'package:apotech_apps/view/category/category_view.dart';
 import 'package:apotech_apps/view/login/login_view.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
@@ -360,7 +361,13 @@ class _DashboardViewState extends State<DashboardView> {
                         Color(0xFFFF70A7)
                       ],
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        CategoryView.routeName,
+                        ModalRoute.withName(DashboardView.routeName),
+                      );
+                    },
                   ),
                   const SizedBox(width: AppSizes.height),
                   CategoriesChild(
@@ -375,7 +382,13 @@ class _DashboardViewState extends State<DashboardView> {
                         Color(0xFF15BD92)
                       ],
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        CategoryView.routeName,
+                        ModalRoute.withName(DashboardView.routeName),
+                      );
+                    },
                   ),
                   const SizedBox(width: AppSizes.height),
                   CategoriesChild(
@@ -390,7 +403,13 @@ class _DashboardViewState extends State<DashboardView> {
                         Color(0xFFFF793A)
                       ],
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        CategoryView.routeName,
+                        ModalRoute.withName(DashboardView.routeName),
+                      );
+                    },
                   ),
                   const SizedBox(width: AppSizes.height),
                   CategoriesChild(
@@ -405,7 +424,13 @@ class _DashboardViewState extends State<DashboardView> {
                         Color(0xFF3E7DFF)
                       ],
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        CategoryView.routeName,
+                        ModalRoute.withName(DashboardView.routeName),
+                      );
+                    },
                   ),
                   const SizedBox(width: AppSizes.height),
                   CategoriesChild(
@@ -420,7 +445,13 @@ class _DashboardViewState extends State<DashboardView> {
                         Color(0xFF080E47)
                       ],
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        CategoryView.routeName,
+                        ModalRoute.withName(DashboardView.routeName),
+                      );
+                    },
                   ),
                   const SizedBox(width: AppSizes.height),
                 ],

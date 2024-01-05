@@ -4,6 +4,7 @@ import 'package:apotech_apps/app/theme/app_colors.dart';
 import 'package:apotech_apps/app/theme/app_text_style.dart';
 import 'package:apotech_apps/app/widget/app_mini_product.dart';
 import 'package:apotech_apps/app/widget/app_product_category_child.dart';
+import 'package:apotech_apps/view/product_details/product_details.dart';
 import 'package:flutter/material.dart';
 
 class CategoryView extends StatefulWidget {
@@ -139,40 +140,67 @@ class _CategoryViewState extends State<CategoryView> {
         ));
   }
 
-  List items = [
-    const ProductCategoryChild(
-      title: 'Accu-check Active Test Strip',
-      rate: '4.5',
-      price: 'Rp 150.000',
-      image: AppAssets.imageCategory1Path,
-      isLabel: true,
-      labelColor: AppColors.red,
-      labelText: '  SALE  ',
-    ),
-    const ProductCategoryChild(
-      title: 'Omron HEM-8712 BP Monitor',
-      rate: '4.5',
-      price: 'Rp 150.000',
-      image: AppAssets.imageCategory2Path,
-      isLabel: true,
-      labelColor: AppColors.yellow,
-      labelText: '15% OFF',
-    ),
-    const ProductCategoryChild(
-      title: 'Omron HEM-8712 BP Monitor',
-      rate: '4.5',
-      price: 'Rp 150.000',
-      image: AppAssets.imageCategory3Path,
-    ),
-    const ProductCategoryChild(
-      title: 'Accu-check Active Test Strip',
-      rate: '4.5',
-      price: 'Rp 150.000',
-      image: AppAssets.imageCategory4Path,
-    ),
-  ];
-
   Widget categoryProductList() {
+    List items = [
+      ProductCategoryChild(
+        title: 'Accu-check Active Test Strip',
+        rate: '4.5',
+        price: 'Rp 150.000',
+        image: AppAssets.imageCategory1Path,
+        isLabel: true,
+        labelColor: AppColors.red,
+        labelText: '  SALE  ',
+        onTap: () {
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            ProductDetailsView.routeName,
+            ModalRoute.withName(CategoryView.routeName),
+          );
+        },
+      ),
+      ProductCategoryChild(
+        title: 'Omron HEM-8712 BP Monitor',
+        rate: '4.5',
+        price: 'Rp 150.000',
+        image: AppAssets.imageCategory2Path,
+        isLabel: true,
+        labelColor: AppColors.yellow,
+        labelText: '15% OFF',
+        onTap: () {
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            ProductDetailsView.routeName,
+            ModalRoute.withName(CategoryView.routeName),
+          );
+        },
+      ),
+      ProductCategoryChild(
+        title: 'Omron HEM-8712 BP Monitor',
+        rate: '4.5',
+        price: 'Rp 150.000',
+        image: AppAssets.imageCategory3Path,
+        onTap: () {
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            ProductDetailsView.routeName,
+            ModalRoute.withName(CategoryView.routeName),
+          );
+        },
+      ),
+      ProductCategoryChild(
+        title: 'Accu-check Active Test Strip',
+        rate: '4.5',
+        price: 'Rp 150.000',
+        image: AppAssets.imageCategory4Path,
+        onTap: () {
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            ProductDetailsView.routeName,
+            ModalRoute.withName(CategoryView.routeName),
+          );
+        },
+      ),
+    ];
     return headerWithWrapper(
         'All Products',
         GridView.builder(

@@ -3,6 +3,7 @@ import 'package:apotech_apps/app/const/app_sizes.dart';
 import 'package:apotech_apps/app/theme/app_colors.dart';
 import 'package:apotech_apps/app/theme/app_text_style.dart';
 import 'package:apotech_apps/app/widget/app_buton.dart';
+import 'package:apotech_apps/view/cart/cart_view.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
         centerTitle: false,
         leading: const Icon(
           Icons.arrow_back,
-          color: AppColors.base,
+          color: AppColors.purple,
         ),
         actions: [
           Row(
@@ -64,7 +65,13 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
         child: AppButton(
           text: 'GO TO CART',
           elevation: 6,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              CartView.routeName,
+              ModalRoute.withName(ProductDetailsView.routeName),
+            );
+          },
         ),
       ),
     );

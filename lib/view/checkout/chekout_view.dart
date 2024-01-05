@@ -3,6 +3,7 @@ import 'package:apotech_apps/app/const/app_sizes.dart';
 import 'package:apotech_apps/app/theme/app_colors.dart';
 import 'package:apotech_apps/app/theme/app_text_style.dart';
 import 'package:apotech_apps/app/widget/app_buton.dart';
+import 'package:apotech_apps/view/checkout/checkout_success_view.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutView extends StatefulWidget {
@@ -40,7 +41,13 @@ class _CheckoutViewState extends State<CheckoutView> {
         child: AppButton(
           text: 'Pay Now Rp 30.000',
           elevation: 6,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              CheckoutSuccessView.routeName,
+              ModalRoute.withName(CheckoutView.routeName),
+            );
+          },
         ),
       ),
     );

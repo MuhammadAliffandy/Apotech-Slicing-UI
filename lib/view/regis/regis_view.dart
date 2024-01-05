@@ -27,7 +27,7 @@ class RegisterView extends StatelessWidget {
           },
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColors.base,
+            color: AppColors.purple,
           ),
         ),
       ),

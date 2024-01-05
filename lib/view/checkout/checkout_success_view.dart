@@ -3,6 +3,7 @@ import 'package:apotech_apps/app/const/app_sizes.dart';
 import 'package:apotech_apps/app/theme/app_colors.dart';
 import 'package:apotech_apps/app/theme/app_text_style.dart';
 import 'package:apotech_apps/app/widget/app_buton.dart';
+import 'package:apotech_apps/view/home/dashboard_view.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutSuccessView extends StatelessWidget {
@@ -21,14 +22,21 @@ class CheckoutSuccessView extends StatelessWidget {
         ),
       ),
       backgroundColor: AppColors.white,
-      bottomNavigationBar: const Padding(
-        padding: EdgeInsets.symmetric(
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(
           horizontal: AppSizes.padding,
           vertical: AppSizes.padding * 2,
         ),
         child: AppButton(
           text: 'Continue Order',
           elevation: 6,
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              DashboardView.routeName,
+              ModalRoute.withName(CheckoutSuccessView.routeName),
+            );
+          },
         ),
       ),
       body: Column(
