@@ -19,7 +19,7 @@ class OTPView extends StatelessWidget {
       appBar: AppBar(
         leading: const Icon(
           Icons.arrow_back,
-          color: AppColors.base,
+          color: AppColors.purple,
         ),
       ),
       body: Padding(
@@ -32,6 +32,7 @@ class OTPView extends StatelessWidget {
               style: AppTextStyle.bold(
                 context,
                 fontSize: AppSizes.height * 2,
+                color: AppColors.purple,
               ),
             ),
             const SizedBox(height: AppSizes.height),

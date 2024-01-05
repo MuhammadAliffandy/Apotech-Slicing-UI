@@ -72,7 +72,7 @@ class HomeView extends StatelessWidget {
                   backgroundColor: Colors.white,
                   textColor: AppColors.base,
                   textSize: 12,
-                  borderColor: AppColors.baseLv5,
+                  borderColor: AppColors.baseLv6,
                 ),
                 const SizedBox(height: AppSizes.height),
                 const AppButton(
@@ -81,7 +81,7 @@ class HomeView extends StatelessWidget {
                   backgroundColor: Colors.white,
                   textColor: AppColors.base,
                   textSize: 12,
-                  borderColor: AppColors.baseLv5,
+                  borderColor: AppColors.baseLv6,
                 ),
                 const SizedBox(height: AppSizes.height),
                 TextButton(

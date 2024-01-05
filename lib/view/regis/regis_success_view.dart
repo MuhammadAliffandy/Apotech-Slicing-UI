@@ -18,7 +18,7 @@ class RegisSuccessView extends StatelessWidget {
       appBar: AppBar(
         leading: const Icon(
           Icons.arrow_back,
-          color: AppColors.base,
+          color: AppColors.purple,
         ),
       ),
       backgroundColor: AppColors.white,
